@@ -30,17 +30,16 @@ const images = [
 const galleryConatiner = document.querySelector(".gallery");
 const liEl = document.createElement("li");
 
-images.map((image) => {
-  liEl.classList.add("item-gallery");
-
+const imagesEl = images.map((image) => {
   const imageEl = document.createElement("img");
   imageEl.classList.add("gallery-image");
+
   imageEl.src = image.url;
   imageEl.alt = image.alt;
 
   liEl.append(imageEl);
+
+  return liEl;
 });
 
-galleryConatiner.append(liEl);
-
-console.log(galleryConatiner);
+galleryConatiner.append(...imagesEl);
