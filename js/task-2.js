@@ -28,9 +28,9 @@ const images = [
 ];
 
 const galleryConatiner = document.querySelector(".gallery");
+const liEl = document.createElement("li");
 
 images.map((image) => {
-  const liEl = document.createElement("li");
   liEl.classList.add("item-gallery");
 
   const imageEl = document.createElement("img");
@@ -39,7 +39,8 @@ images.map((image) => {
   imageEl.alt = image.alt;
 
   liEl.append(imageEl);
-  galleryConatiner.append(liEl);
 });
+
+galleryConatiner.append(liEl);
 
 console.log(galleryConatiner);

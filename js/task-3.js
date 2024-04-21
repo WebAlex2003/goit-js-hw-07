@@ -7,7 +7,12 @@ const onInput = inputEl.addEventListener("input", inputFunction);
 
 function inputFunction(event) {
   event.preventDefault();
-  console.log(event.currentTarget.value);
 
-  nameOutput.textContent = event.currentTarget.value.trim();
+  const inputValue = event.currentTarget.value.trim();
+
+  if (inputValue === "") {
+    nameOutput.textContent = "Anonymous";
+  } else {
+    nameOutput.textContent = inputValue;
+  }
 }
