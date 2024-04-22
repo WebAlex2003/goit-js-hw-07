@@ -28,9 +28,9 @@ const images = [
 ];
 
 const galleryConatiner = document.querySelector(".gallery");
-const liEl = document.createElement("li");
 
 const imagesEl = images.map((image) => {
+  const liEl = document.createElement("li");
   const imageEl = document.createElement("img");
   imageEl.classList.add("gallery-image");
 
